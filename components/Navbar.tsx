@@ -57,11 +57,11 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-neutral-900/95 backdrop-blur-md shadow-2xl py-2' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="flex items-center gap-2 group">
-          <div className="bg-green-600 text-white p-1 rounded transform transition-transform group-hover:rotate-12">
+          <div className="bg-orange-600 text-white p-1 rounded transform transition-transform group-hover:rotate-12">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0 5.11 5.11 0 0 1 1.05 1.54 4 4 0 0 1 1.41 7.87L12 21Z" /><path d="M12 11h.01" /><path d="M12 7h.01" /><path d="M12 15h.01" /></svg>
           </div>
           <span className="text-2xl font-black tracking-tighter text-white oswald uppercase">
-            FLAVA <span className="text-green-600">25</span>
+            FLAVA <span className="text-orange-600">25</span>
           </span>
         </a>
 
@@ -72,14 +72,14 @@ const Navbar: React.FC = () => {
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => scrollToSection(e, link.id)}
-              className={`relative py-1 transition-all duration-300 hover:text-green-500 ${activeSection === link.id ? 'text-green-500' : 'text-white'}`}
+              className={`relative py-1 transition-all duration-300 hover:text-green-500 ${activeSection === link.id ? 'text-orange-500' : 'text-white'}`}
             >
               {link.label}
-              <span className={`absolute -bottom-3 left-0 h-0.5 bg-green-600 transition-all duration-300 ${activeSection === link.id ? 'w-full opacity-100' : 'w-0 opacity-0'}`}></span>
+              <span className={`absolute -bottom-3 left-0 h-0.5 bg-orange-600 transition-all duration-300 ${activeSection === link.id ? 'w-full opacity-100' : 'w-0 opacity-0'}`}></span>
             </a>
           ))}
           <div className="flex items-center gap-6 ml-4">
-            <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl font-black text-xs">
+            <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl font-black text-xs">
               Order Online
             </a>
           </div>
@@ -103,13 +103,13 @@ const Navbar: React.FC = () => {
             key={link.id}
             href={`#${link.id}`}
             onClick={(e) => scrollToSection(e, link.id)}
-            className={`text-2xl font-black uppercase transition-colors tracking-widest ${activeSection === link.id ? 'text-green-500' : 'text-white'}`}
+            className={`text-2xl font-black uppercase transition-colors tracking-widest ${activeSection === link.id ? 'text-orange-500' : 'text-white'}`}
           >
             {link.label}
           </a>
         ))}
         <div className="flex flex-col gap-4 pt-4 border-t border-neutral-800">
-          <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white text-center w-full py-4 rounded-2xl text-lg font-black uppercase tracking-widest shadow-lg">
+          <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-orange-600 text-white text-center w-full py-4 rounded-2xl text-lg font-black uppercase tracking-widest shadow-lg">
             Order Online
           </a>
         </div>
