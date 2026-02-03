@@ -1,0 +1,7 @@
+{
+  "name": "Flava25 Cradley Heath",
+  "description": "Flava25 - Cradley Heath's favorite burger and kebab spot. Always hot, always tasty.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
