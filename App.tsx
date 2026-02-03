@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import SEO from './components/SEO';
 import CookieBanner from './components/CookieBanner';
 import LegalModal, { LegalType } from './components/LegalModal';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
+
 
 const App: React.FC = () => {
   const [activeLegal, setActiveLegal] = useState<LegalType>(null);
@@ -46,6 +48,7 @@ const App: React.FC = () => {
         </span>
       </div>
 
+      <PWAInstallPrompt />
       <CookieBanner />
     </div>
   );
