@@ -33,20 +33,19 @@ const MenuGrid: React.FC = () => {
     <SectionWrapper id="menu" className="py-24 bg-neutral-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-orange-600 font-black uppercase tracking-[0.4em] text-xs">Flame Grilled & Fresh</span>
+          <span className="text-green-600 font-black uppercase tracking-[0.4em] text-xs">Flame Grilled & Fresh</span>
           <h2 className="text-5xl md:text-7xl font-black text-neutral-900 mt-4 mb-8 tracking-tighter">OUR SIGNATURE MENU</h2>
-          
+
           {/* Main Category Tabs */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-8 bg-neutral-200/50 p-2 rounded-2xl md:rounded-full inline-flex mx-auto">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id as any)}
-                className={`px-6 py-3 rounded-xl md:rounded-full text-xs font-black uppercase tracking-widest transition-all ${
-                  activeCategory === cat.id 
-                    ? 'bg-orange-600 text-white shadow-lg' 
+                className={`px-6 py-3 rounded-xl md:rounded-full text-xs font-black uppercase tracking-widest transition-all ${activeCategory === cat.id
+                    ? 'bg-green-600 text-white shadow-lg'
                     : 'bg-transparent text-neutral-500 hover:text-neutral-900'
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -63,14 +62,14 @@ const MenuGrid: React.FC = () => {
                 <h3 className="text-3xl font-black text-neutral-900 uppercase tracking-tight px-4">{subcat}</h3>
                 <div className="h-px bg-neutral-300 flex-grow"></div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {items.map((item) => (
                   <div key={item.id} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col h-full border border-neutral-100/80">
                     <div className="relative h-72 overflow-hidden bg-neutral-200">
-                      <img 
-                        src={item.image} 
-                        alt={item.name} 
+                      <img
+                        src={item.image}
+                        alt={item.name}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         loading="lazy"
                         onError={(e) => {
@@ -78,11 +77,10 @@ const MenuGrid: React.FC = () => {
                         }}
                       />
                       {item.badge && (
-                        <div className={`absolute top-6 left-6 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl backdrop-blur-md ${
-                          item.badge === 'Spicy' ? 'bg-red-600/90 text-white' : 
-                          item.badge === 'Popular Side' || item.badge === 'Popular Choice' ? 'bg-orange-500/90 text-white' : 
-                          'bg-green-600/90 text-white'
-                        }`}>
+                        <div className={`absolute top-6 left-6 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl backdrop-blur-md ${item.badge === 'Spicy' ? 'bg-red-600/90 text-white' :
+                            item.badge === 'Popular Side' || item.badge === 'Popular Choice' ? 'bg-green-500/90 text-white' :
+                              'bg-green-600/90 text-white'
+                          }`}>
                           {item.badge}
                         </div>
                       )}
@@ -103,14 +101,14 @@ const MenuGrid: React.FC = () => {
                     </div>
                     <div className="p-8 flex flex-col flex-grow">
                       <div className="flex justify-between items-start mb-3">
-                        <h4 className="text-2xl font-black text-neutral-900 group-hover:text-orange-600 transition-colors uppercase tracking-tight">
+                        <h4 className="text-2xl font-black text-neutral-900 group-hover:text-green-600 transition-colors uppercase tracking-tight">
                           {item.name}
                         </h4>
                       </div>
                       <p className="text-neutral-500 text-sm leading-relaxed mb-8 flex-grow italic">
                         "{item.description}"
                       </p>
-                      <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="w-full bg-neutral-900 text-white py-4.5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-orange-600 hover:shadow-orange-500/20 shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                      <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="w-full bg-neutral-900 text-white py-4.5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-green-600 hover:shadow-green-500/20 shadow-lg active:scale-95 flex items-center justify-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
                         Add to Order
                       </a>
@@ -120,7 +118,7 @@ const MenuGrid: React.FC = () => {
               </div>
             </div>
           ))}
-          
+
           {Object.keys(groupedItems).length === 0 && (
             <div className="text-center py-20 opacity-40">
               <p className="text-xl font-bold uppercase tracking-widest">Select a category to view items</p>
@@ -136,14 +134,14 @@ const MenuGrid: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-             <div className="bg-neutral-800 px-6 py-4 rounded-2xl border border-neutral-700">
-               <p className="text-[10px] font-black text-orange-500 uppercase tracking-widest mb-1">Make it a Meal</p>
-               <p className="text-lg font-bold">+£3.45</p>
-             </div>
-             <div className="bg-neutral-800 px-6 py-4 rounded-2xl border border-neutral-700">
-               <p className="text-[10px] font-black text-orange-500 uppercase tracking-widest mb-1">Table Service</p>
-               <p className="text-lg font-bold">£1.95</p>
-             </div>
+            <div className="bg-neutral-800 px-6 py-4 rounded-2xl border border-neutral-700">
+              <p className="text-[10px] font-black text-green-500 uppercase tracking-widest mb-1">Make it a Meal</p>
+              <p className="text-lg font-bold">+£3.45</p>
+            </div>
+            <div className="bg-neutral-800 px-6 py-4 rounded-2xl border border-neutral-700">
+              <p className="text-[10px] font-black text-green-500 uppercase tracking-widest mb-1">Table Service</p>
+              <p className="text-lg font-bold">£1.95</p>
+            </div>
           </div>
         </div>
       </div>
