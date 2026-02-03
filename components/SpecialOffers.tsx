@@ -4,7 +4,7 @@ import { SPECIAL_OFFERS } from '../constants';
 import SectionWrapper from './SectionWrapper';
 
 const SpecialOffers: React.FC = () => {
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4_";
+  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   return (
     <SectionWrapper id="offers" className="py-20 bg-charcoal text-white overflow-hidden">

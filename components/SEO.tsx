@@ -4,7 +4,7 @@ import { MENU_ITEMS, BUSINESS_INFO } from '../constants';
 
 const SEO: React.FC = () => {
   const categories = Array.from(new Set(MENU_ITEMS.map(item => item.category)));
-  
+
   const menuSections = categories.map(cat => ({
     "@type": "MenuSection",
     "name": cat.charAt(0).toUpperCase() + cat.slice(1) + 's',
@@ -42,7 +42,7 @@ const SEO: React.FC = () => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 52.4705, 
+      "latitude": 52.4705,
       "longitude": -2.0628
     },
     "openingHoursSpecification": [
@@ -68,7 +68,7 @@ const SEO: React.FC = () => {
       "@type": "OrderAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.restaurantlogin.com/api/fb/z5j_v4_",
+        "urlTemplate": "https://www.restaurantlogin.com/api/fb/z5j_v4",
         "inLanguage": "en-GB",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",

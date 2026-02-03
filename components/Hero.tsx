@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4_";
+  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   return (
     <section id="home" className="relative h-[90vh] flex items-center overflow-hidden scroll-mt-24">

@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4_";
+  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   useEffect(() => {
     const handleScroll = () => {

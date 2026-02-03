@@ -13,7 +13,7 @@ import LegalModal, { LegalType } from './components/LegalModal';
 
 const App: React.FC = () => {
   const [activeLegal, setActiveLegal] = useState<LegalType>(null);
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4_";
+  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   return (
     <div className="flex flex-col min-h-screen selection:bg-green-600 selection:text-white bg-white">

@@ -6,7 +6,7 @@ import { MenuItem } from '../types';
 
 const MenuGrid: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<MenuItem['category']>('kebabs-wraps');
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4_";
+  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   const categories = [
     { id: 'kebabs-wraps', label: 'Doner & Kebabs' },
@@ -43,8 +43,8 @@ const MenuGrid: React.FC = () => {
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id as any)}
                 className={`px-6 py-3 rounded-xl md:rounded-full text-xs font-black uppercase tracking-widest transition-all ${activeCategory === cat.id
-                    ? 'bg-green-600 text-white shadow-lg'
-                    : 'bg-transparent text-neutral-500 hover:text-neutral-900'
+                  ? 'bg-green-600 text-white shadow-lg'
+                  : 'bg-transparent text-neutral-500 hover:text-neutral-900'
                   }`}
               >
                 {cat.label}
@@ -78,8 +78,8 @@ const MenuGrid: React.FC = () => {
                       />
                       {item.badge && (
                         <div className={`absolute top-6 left-6 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl backdrop-blur-md ${item.badge === 'Spicy' ? 'bg-red-600/90 text-white' :
-                            item.badge === 'Popular Side' || item.badge === 'Popular Choice' ? 'bg-green-500/90 text-white' :
-                              'bg-green-600/90 text-white'
+                          item.badge === 'Popular Side' || item.badge === 'Popular Choice' ? 'bg-green-500/90 text-white' :
+                            'bg-green-600/90 text-white'
                           }`}>
                           {item.badge}
                         </div>
