@@ -6,7 +6,6 @@ import { MenuItem } from '../types';
 
 const MenuGrid: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<MenuItem['category']>('kebabs-wraps');
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   const categories = [
     { id: 'kebabs-wraps', label: 'Doner & Kebabs' },
@@ -108,10 +107,14 @@ const MenuGrid: React.FC = () => {
                       <p className="text-neutral-500 text-sm leading-relaxed mb-8 flex-grow italic">
                         "{item.description}"
                       </p>
-                      <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="w-full bg-neutral-900 text-white py-4.5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-orange-600 hover:shadow-orange-500/20 shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                      <span
+                        className="glf-button w-full bg-neutral-900 text-white py-4.5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-orange-600 hover:shadow-orange-500/20 shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                        data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+                        data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+                      >
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
                         Add to Order
-                      </a>
+                      </span>
                     </div>
                   </div>
                 ))}

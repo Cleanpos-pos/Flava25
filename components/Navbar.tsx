@@ -6,7 +6,6 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +25,21 @@ const Navbar: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Load GLF ordering script
+    const script = document.createElement('script');
+    script.src = 'https://www.fbgcdn.com/embedder/js/ewm2.js';
+    script.defer = true;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
   }, []);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -79,9 +93,13 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <div className="flex items-center gap-6 ml-4">
-            <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl font-black text-xs">
-              Order Online
-            </a>
+            <span
+              className="glf-button bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-xl font-black text-xs cursor-pointer inline-block"
+              data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+              data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+            >
+              SEE MENU & ORDER
+            </span>
           </div>
         </div>
 
@@ -109,9 +127,13 @@ const Navbar: React.FC = () => {
           </a>
         ))}
         <div className="flex flex-col gap-4 pt-4 border-t border-neutral-800">
-          <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-orange-600 text-white text-center w-full py-4 rounded-2xl text-lg font-black uppercase tracking-widest shadow-lg">
-            Order Online
-          </a>
+          <span
+            className="glf-button bg-orange-600 text-white text-center w-full py-4 rounded-2xl text-lg font-black uppercase tracking-widest shadow-lg cursor-pointer inline-block"
+            data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+            data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+          >
+            SEE MENU & ORDER
+          </span>
         </div>
       </div>
     </nav>

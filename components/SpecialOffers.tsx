@@ -4,7 +4,6 @@ import { SPECIAL_OFFERS } from '../constants';
 import SectionWrapper from './SectionWrapper';
 
 const SpecialOffers: React.FC = () => {
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   return (
     <SectionWrapper id="offers" className="py-20 bg-charcoal text-white overflow-hidden">
@@ -29,9 +28,13 @@ const SpecialOffers: React.FC = () => {
               <p className="text-neutral-400 text-sm mb-6 leading-relaxed italic">{offer.description}</p>
               <div className="flex items-center justify-between mt-auto">
                 <span className="text-3xl font-black text-white">{offer.price}</span>
-                <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-orange-600 hover:text-white px-5 py-2 rounded-xl font-bold text-xs text-center uppercase transition-all transform group-hover:scale-105">
+                <span
+                  className="glf-button bg-white text-black hover:bg-orange-600 hover:text-white px-5 py-2 rounded-xl font-bold text-xs text-center uppercase transition-all transform group-hover:scale-105 cursor-pointer inline-block"
+                  data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+                  data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+                >
                   Grab Deal
-                </a>
+                </span>
               </div>
             </div>
           ))}

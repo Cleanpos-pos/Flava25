@@ -2,7 +2,6 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const ORDER_LINK = "https://www.restaurantlogin.com/api/fb/z5j_v4";
 
   return (
     <section id="home" className="relative h-[90vh] flex items-center overflow-hidden scroll-mt-24">
@@ -28,12 +27,20 @@ const Hero: React.FC = () => {
             100% Fresh Meat. Charcoal-Grilled Kebabs. The heart of Cradley Heath's late-night food scene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-orange-600 hover:bg-orange-700 text-white text-center text-lg font-bold py-5 px-10 rounded-2xl transform transition-all hover:scale-105 shadow-2xl uppercase tracking-wider">
+            <span
+              className="glf-button bg-orange-600 hover:bg-orange-700 text-white text-center text-lg font-bold py-5 px-10 rounded-2xl transform transition-all hover:scale-105 shadow-2xl uppercase tracking-wider cursor-pointer inline-block"
+              data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+              data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+            >
               Order for Delivery
-            </a>
-            <a href={ORDER_LINK} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-center border border-white/30 text-lg font-bold py-5 px-10 rounded-2xl transition-all uppercase tracking-wider">
+            </span>
+            <span
+              className="glf-button bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-center border border-white/30 text-lg font-bold py-5 px-10 rounded-2xl transition-all uppercase tracking-wider cursor-pointer inline-block"
+              data-glf-cuid="a11e8255-8d39-4b13-a541-4c1ea031a887"
+              data-glf-ruid="61cb991b-3d78-4085-a190-ca5dadb3ee9c"
+            >
               Takeaway Menu
-            </a>
+            </span>
           </div>
         </div>
       </div>
